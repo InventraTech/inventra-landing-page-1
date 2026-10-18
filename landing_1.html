@@ -34,11 +34,53 @@
         </button>
     </header>
 
-    <div class="foto1">
-        <img src="carrossel1.svg" alt="Gestora de estoque">
-    </div>
+    <section class="carrossel">
+        <div class="carrosselSlides">
+            <article class="slide ativo">
+                <img src="carrossel1.jpg" alt="Profissional controlando o estoque de um armazém">
 
-    <div class="bloco1"></div>
+                <div class="carrosselConteudo">
+                    <h1>Controle total do seu <br><span>negócio.</span></h1>
+                    <p>Acompanhe seu estoque, processos e resultados com mais precisão e segurança.</p>
+                    <a href="#recursos" class="carrosselBotao">Começar agora</a>
+                </div>
+            </article>
+
+            <article class="slide">
+                <img src="carrossel2.jpg" alt="Profissional de cozinha organizando o estoque de alimentos">
+
+                <div class="carrosselConteudo">
+                    <h1>Gestão inteligente <br><span>resultados melhores.</span></h1>
+                    <p>Tenha mais controle sobre os processos e torne a gestão do seu negócio mais eficiente.</p>
+                    <a href="#recursos" class="carrosselBotao">Começar agora</a>
+                </div>
+            </article>
+
+            <article class="slide">
+                <img src="carrossel3.jpg" alt="Equipe reunida discutindo a organização do negócio">
+
+                <div class="carrosselConteudo">
+                    <h1>Transforme organização <br>em <span>crescimento.</span></h1>
+                    <p>Com processos mais eficientes e decisões melhores, seu negócio está preparado para crescer.</p>
+                    <a href="#recursos" class="carrosselBotao">Começar agora</a>
+                </div>
+            </article>
+        </div>
+
+        <button class="carrosselSeta anterior" type="button" aria-label="Slide anterior">
+            &#10094;
+        </button>
+
+        <button class="carrosselSeta proximo" type="button" aria-label="Próximo slide">
+            &#10095;
+        </button>
+
+        <div class="carrosselIndicadores">
+            <button class="indicador ativo" type="button" aria-label="Ir para o slide 1"></button>
+            <button class="indicador" type="button" aria-label="Ir para o slide 2"></button>
+            <button class="indicador" type="button" aria-label="Ir para o slide 3"></button>
+        </div>
+    </section>
 
     <div>
         <h1 class="titulo">Sistema de Gestão
@@ -228,5 +270,8 @@
             <p>Gestão eficiente, desperdício reduzido.</p>
         </div>
     </footer>
+
+    <script src="landing1.js"></script>
+
 </body>
 </html>
