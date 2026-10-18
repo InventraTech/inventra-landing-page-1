@@ -221,3 +221,98 @@ footer{
 footer p{
     margin: 0;
 }
+@media (max-width: 1200px) {
+    #login {
+        margin-right: 40px;
+    }
+
+    .mascote {
+        margin-right: 220px;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        justify-content: center;
+        margin-right: 0;
+        padding: 20px 0;
+        box-sizing: border-box;
+        min-height: 100vh;
+    }
+
+    .elemento_login,
+    .mascote {
+        display: none;
+    }
+
+    #login {
+        width: min(550px, calc(100% - 32px));
+        height: auto;
+        min-height: 700px;
+        margin: 0;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .botoes_entrar_conta,
+    #separador,
+    #trocar_de_log,
+    form input,
+    #entrar_site {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .botao_padrao {
+        width: 50%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #login {
+        width: calc(100% - 24px);
+        padding: 15px 14px 20px;
+        border-radius: 16px;
+    }
+
+    header {
+        height: auto;
+        min-height: 125px;
+    }
+
+    #title {
+        font-size: 22px;
+    }
+
+    #descricao_head {
+        font-size: 14px;
+    }
+
+    .botoes_entrar_conta {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    #separador span {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .botao_padrao {
+        font-size: 14px;
+    }
+
+    form label,
+    form input,
+    #entrar_site {
+        font-size: 14px;
+    }
+}
