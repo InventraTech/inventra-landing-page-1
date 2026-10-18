@@ -4,7 +4,7 @@ body {
     background-color: #F5F5F5;
     overflow-x: hidden;
 }
-
+ 
 header {
     position: fixed;
     top: 0;
@@ -20,25 +20,25 @@ header {
     background-color: #FDFDFD;
     border-bottom: 2px solid #eaeaea;
 }
-
+ 
 .imagotipo img {
     width: 60px;
     height: auto;
 }
-
+ 
 .logotipo img {
     width: 120px;
     height: auto;
     margin-left: -120px;
 }
-
+ 
 .menu {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-left: 400px;
 }
-
+ 
 .menu a {
     font-family: "K2D", sans-serif;
     font-size: 16px;
@@ -47,7 +47,7 @@ header {
     text-decoration: none;
     white-space: nowrap;
 }
-
+ 
 .botHeader {
     width: 160px;
     height: 35px;
@@ -59,7 +59,7 @@ header {
     font-size: 16px;
     color: white;
 }
-
+ 
 .foto1 img {
     position: absolute;
     width: 950px;
@@ -67,14 +67,14 @@ header {
     margin-top: -74px;
     margin-left: 650px;
 }
-
+ 
 .bloco1 {
     position: relative;
     width: 100%;
     height: 650px;
     background: linear-gradient(to right, #21014F 45%, transparent 70%);
 }
-
+ 
 .imagemBLoco1 img {
     position: absolute;
     right: 0;
@@ -83,14 +83,14 @@ header {
     height: auto;
     margin-top: -276px;
 }
-
+ 
 .titulo {
     margin-left: 70px;
     font-family: "K2D", sans-serif;
     font-size: 70px;
     color: #360082;
 }
-
+ 
 .texto1 {
     margin-left: 70px;
     font-family: "K2D", sans-serif;
@@ -100,7 +100,7 @@ header {
     line-height: 1.5;
     color: #5D5D5D;
 }
-
+ 
 .inventraTexto {
     font-family: "K2D", sans-serif;
     font-size: 70px;
@@ -110,7 +110,7 @@ header {
     line-height: 1.5;
     color: #360082;
 }
-
+ 
 .comeceGratuitamente {
     display: flex;
     align-items: center;
@@ -130,19 +130,19 @@ header {
     color: #360082;
     white-space: nowrap;
 }
-
+ 
 .comeceGratuitamente img {
     width: 30px;
     margin-top: 5px;
     margin-left: 7px;
 }
-
+ 
 .info1 img {
     width: 550px;
     margin-top: 40px;
     margin-left: 60px;
 }
-
+ 
 .bloco2 {
     position: absolute;
     z-index: 1;
@@ -151,7 +151,7 @@ header {
     margin-top: 31px;
     background-color: #FFFFFF;
 }
-
+ 
 .texto2 {
     position: relative;
     z-index: 2;
@@ -162,7 +162,7 @@ header {
     color: #360082;
     text-align: center;
 }
-
+ 
 .texto3 {
     position: relative;
     z-index: 2;
@@ -175,99 +175,81 @@ header {
     color: #5D5D5D;
     text-align: center;
 }
-
-.retang1 {
+ 
+/* ---------- Cards de recursos ---------- */
+.recursosGrid {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-self: center;
-    align-content: center;
-    width: 400px;
-    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 404px);
+    justify-content: center;
+    gap: 40px 30px;
     margin-top: 65px;
-    background-color: #ffffff;
-    border: 2px solid #D5D5D5;
-    border-radius: 19px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
-.retang2 {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-self: center;
-    align-content: center;
-    width: 400px;
-    height: 180px;
-    margin-top: 40px;
-    background-color: #ffffff;
+.recursoCard {
+    box-sizing: border-box;
+    width: 404px;
+    height: 184px;
+    padding: 18px 20px;
+    background-color: #FFFFFF;
     border: 2px solid #D5D5D5;
     border-radius: 19px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.25s ease;
 }
 
-.retang3 {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-self: left;
-    align-content: center;
-    width: 400px;
-    height: 180px;
-    margin-top: -407px;
-    margin-left: 120px;
-    background-color: #ffffff;
-    border: 2px solid #D5D5D5;
-    border-radius: 19px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+.recursoCard:hover {
+    box-shadow: 0px 8px 24px 2px rgba(0, 0, 0, 0.2);
 }
 
-.retang4 {
-    position: relative;
-    z-index: 2;
+.recursoIcone {
     display: flex;
-    justify-self: left;
-    align-content: center;
-    width: 400px;
-    height: 180px;
-    margin-top: 40px;
-    margin-left: 120px;
-    background-color: #ffffff;
-    border: 2px solid #D5D5D5;
-    border-radius: 19px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #F3F3F3;
+    border-radius: 12px;
+    transition: background-color 0.25s ease;
 }
 
-.retang5 {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-self: left;
-    align-content: center;
-    width: 400px;
-    height: 180px;
-    margin-top: -407px;
-    margin-left: 1000px;
-    background-color: #ffffff;
-    border: 2px solid #D5D5D5;
-    border-radius: 19px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+.recursoIcone img {
+    width: 26px;
+    height: 26px;
 }
 
-.retang6 {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-self: left;
-    align-content: center;
-    width: 400px;
-    height: 180px;
-    margin-top: 41px;
-    margin-left: 1000px;
-    background-color: #ffffff;
-    border: 2px solid #D5D5D5;
-    border-radius: 19px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+.iconeHover {
+    display: none;
+}
+
+.recursoCard:hover .recursoIcone {
+    background-color: #5301C9;
+}
+
+.recursoCard:hover .iconeNormal {
+    display: none;
+}
+
+.recursoCard:hover .iconeHover {
+    display: block;
+}
+
+.recursoTitulo {
+    margin: 14px 0 0;
+    font-family: "K2D", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #360082;
+}
+
+.recursoTexto {
+    margin: 6px 0 0;
+    font-family: "K2D", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #6B6B6B;
 }
 
 .BigNumbers {
@@ -282,25 +264,25 @@ header {
     padding: 40px 0;
     background: linear-gradient(to right, #360182, #5A01D9);
 }
-
+ 
 .number {
     text-align: center;
 }
-
+ 
 .number span {
     font-family: "K2D", sans-serif;
     font-size: 60px;
     font-weight: 500;
     color: #FFD012;
 }
-
+ 
 .number p {
     margin-top: 0px;
     font-family: "K2D", sans-serif;
     font-size: 20px;
     color: #F5F0F0;
 }
-
+ 
 .imagem4 {
     position: absolute;
     right: 0;
@@ -308,7 +290,7 @@ header {
     width: 600px;
     height: auto;
 }
-
+ 
 .texto4 {
     position: relative;
     z-index: 2;
@@ -319,7 +301,7 @@ header {
     font-weight: 600;
     color: #360082;
 }
-
+ 
 .texto5 {
     position: relative;
     z-index: 2;
@@ -330,7 +312,7 @@ header {
     line-height: 1.5;
     color: #5D5D5D;
 }
-
+ 
 .texto6 {
     position: relative;
     z-index: 2;
@@ -341,7 +323,7 @@ header {
     font-weight: 600;
     color: #360082;
 }
-
+ 
 .b1 {
     position: relative;
     z-index: 2;
@@ -356,7 +338,7 @@ header {
     border-radius: 19px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .b2 {
     position: relative;
     z-index: 2;
@@ -372,7 +354,7 @@ header {
     border-radius: 19px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .b3 {
     position: relative;
     z-index: 2;
@@ -389,6 +371,43 @@ header {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
+.passoConteudo {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 14px 22px;
+}
+
+.passoTopo {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.passoNumero {
+    font-family: "K2D", sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1;
+    color: #5301C9;
+}
+
+.passoTitulo {
+    margin: 0;
+    font-family: "K2D", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #360082;
+}
+
+.passoTexto {
+    margin: 12px 0 0;
+    font-family: "K2D", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #6B6B6B;
+}
+ 
 .bloco4 {
     position: relative;
     z-index: 1;
@@ -397,7 +416,7 @@ header {
     margin-top: 42px;
     background-color: #ffffff;
 }
-
+ 
 .imagemGrupo {
     position: absolute;
     left: 0;
@@ -407,7 +426,7 @@ header {
     height: auto;
     margin-top: -139.7px;
 }
-
+ 
 .texto7 {
     position: relative;
     z-index: 2;
@@ -419,7 +438,7 @@ header {
     color: #360082;
     text-align: center;
 }
-
+ 
 .texto8 {
     position: relative;
     z-index: 2;
@@ -431,7 +450,7 @@ header {
     line-height: 1.5;
     color: #5D5D5D;
 }
-
+ 
 .bloco5 {
     position: relative;
     z-index: 1;
@@ -440,7 +459,7 @@ header {
     margin-top: 42px;
     background-color: #F5F5F5;
 }
-
+ 
 .imagem5 {
     position: absolute;
     right: 0;
@@ -448,7 +467,7 @@ header {
     height: auto;
     margin-top: -137px;
 }
-
+ 
 .texto9 {
     position: relative;
     left: 0;
@@ -459,7 +478,7 @@ header {
     font-weight: 600;
     color: #360082;
 }
-
+ 
 .texto10 {
     position: relative;
     z-index: 2;
@@ -470,7 +489,7 @@ header {
     line-height: 1.5;
     color: #5D5D5D;
 }
-
+ 
 .entreEmContato {
     z-index: 1;
     display: flex;
@@ -489,7 +508,7 @@ header {
     color: #360082;
     white-space: nowrap;
 }
-
+ 
 .bloco6 {
     position: relative;
     z-index: 1;
@@ -501,7 +520,7 @@ header {
     margin-top: 42px;
     background: linear-gradient(to right, #B77FFF, #FFD716);
 }
-
+ 
 .texto11 {
     position: relative;
     z-index: 2;
@@ -512,7 +531,7 @@ header {
     color: #360082;
     text-align: center;
 }
-
+ 
 .imagem6 {
     position: absolute;
     z-index: 2;
@@ -520,7 +539,7 @@ header {
     height: auto;
     margin-top: 170px;
 }
-
+ 
 .bloco7 {
     position: relative;
     z-index: 1;
@@ -531,7 +550,7 @@ header {
     height: 410px;
     margin-top: 42px;
 }
-
+ 
 .card1 {
     width: 1000px;
     height: 330px;
@@ -540,7 +559,7 @@ header {
     border-radius: 20px;
     box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .cardTit {
     position: relative;
     z-index: 2;
@@ -550,7 +569,7 @@ header {
     color: #ffffff;
     text-align: center;
 }
-
+ 
 .cardSubt {
     position: relative;
     z-index: 2;
@@ -561,14 +580,14 @@ header {
     color: #DFDFDF;
     text-align: center;
 }
-
+ 
 .Botoes {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-
+ 
 .cardBot1 {
     align-items: center;
     width: 200px;
@@ -581,7 +600,7 @@ header {
     font-weight: 500;
     color: #360082;
 }
-
+ 
 .cardBot2 {
     align-items: center;
     width: 200px;
@@ -594,7 +613,7 @@ header {
     font-weight: 500;
     color: #5F1AD2;
 }
-
+ 
 .cardSub2 {
     position: relative;
     z-index: 2;
@@ -605,7 +624,7 @@ header {
     color: #DFDFDF;
     text-align: center;
 }
-
+ 
 .rodape {
     width: 100%;
     box-sizing: border-box;
@@ -614,7 +633,7 @@ header {
     font-family: "K2D", sans-serif;
     color: #FFFFFF;
 }
-
+ 
 .rodapeConteudo {
     display: flex;
     justify-content: space-between;
@@ -624,25 +643,25 @@ header {
     margin: 0 auto;
     padding-bottom: 35px;
 }
-
+ 
 .rodapeLogo {
     max-width: 270px;
 }
-
+ 
 .rodapeLogo img {
     display: block;
     width: 150px;
     height: auto;
     margin-bottom: 15px;
 }
-
+ 
 .rodapeLogo p {
     margin: 0;
     font-size: 16px;
     line-height: 1.7;
     color: #DFDFDF;
 }
-
+ 
 .rodapeColuna {
     display: flex;
     flex-direction: column;
@@ -650,42 +669,42 @@ header {
     gap: 12px;
     max-width: 250px;
 }
-
+ 
 .rodapeColuna h3 {
     margin: 0 0 8px;
     font-size: 19px;
     font-weight: 500;
     color: #FFDC32;
 }
-
+ 
 .rodapeColuna a {
     font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
     transition: color 0.2s;
 }
-
+ 
 .rodapeColuna a:hover {
     color: #FFDC32;
 }
-
+ 
 .rodapeColuna p {
     margin: 0;
     font-size: 16px;
     line-height: 1.7;
     color: #DFDFDF;
 }
-
+ 
 .rodapeColuna .linkContato {
     margin-top: 5px;
     font-weight: 500;
     color: #FFDC32;
 }
-
+ 
 .rodapeColuna .linkContato:hover {
     text-decoration: underline;
 }
-
+ 
 .rodapeInferior {
     display: flex;
     justify-content: space-between;
@@ -696,51 +715,51 @@ header {
     padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
-
+ 
 .rodapeInferior p {
     margin: 0;
     font-size: 14px;
     color: #DFDFDF;
 }
-
+ 
 @media (max-width: 900px) {
-
+ 
 .rodape {
     padding: 40px 30px 20px;
 }
-
+ 
 .rodapeConteudo {
     flex-wrap: wrap;
     gap: 35px;
 }
-
+ 
     .rodapeLogo,
-
+ 
 .rodapeColuna {
     flex: 1 1 200px;
 }
-
+ 
 }
-
+ 
 @media (max-width: 500px) {
-
+ 
 .rodape {
     padding: 35px 22px 20px;
 }
-
+ 
 .rodapeConteudo {
     flex-direction: column;
     gap: 30px;
 }
-
+ 
 .rodapeInferior {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
-
+ 
 }
-
+ 
 .carrossel {
     position: relative;
     width: 100%;
@@ -749,12 +768,12 @@ header {
     background-color: #200044;
     font-family: "K2D", sans-serif;
 }
-
+ 
 .carrosselSlides {
     width: 100%;
     height: 100%;
 }
-
+ 
 .slide {
     position: absolute;
     inset: 0;
@@ -764,13 +783,13 @@ header {
     visibility: hidden;
     transition: opacity 0.7s ease;
 }
-
+ 
 .slide.ativo {
     opacity: 1;
     visibility: visible;
     z-index: 1;
 }
-
+ 
 .slide > img {
     position: absolute;
     top: 0;
@@ -780,7 +799,7 @@ header {
     object-fit: cover;
     object-position: center;
 }
-
+ 
 .slide::after {
     content: "";
     position: absolute;
@@ -796,7 +815,7 @@ header {
     );
     z-index: 1;
 }
-
+ 
 .carrosselConteudo {
     position: relative;
     z-index: 2;
@@ -805,7 +824,7 @@ header {
     margin-top: -5px;
     color: #FFFFFF;
 }
-
+ 
 .carrosselConteudo h1 {
     max-width: 750px;
     margin: 0 0 55px;
@@ -813,11 +832,11 @@ header {
     font-weight: 600;
     line-height: 1.25;
 }
-
+ 
 .carrosselConteudo h1 span {
     color: #7417FF;
 }
-
+ 
 .carrosselConteudo p {
     max-width: 750px;
     margin: 0 0 90px;
@@ -825,7 +844,7 @@ header {
     font-weight: 500;
     line-height: 1.35;
 }
-
+ 
 .carrosselBotao {
     display: inline-flex;
     align-items: center;
@@ -842,12 +861,12 @@ header {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+ 
 .carrosselBotao:hover {
     background-color: #4A149F;
     transform: translateY(-2px);
 }
-
+ 
 .carrosselSeta {
     position: absolute;
     top: 52%;
@@ -868,19 +887,19 @@ header {
     transform: translateY(-50%);
     transition: opacity 0.3s ease;
 }
-
+ 
 .carrosselSeta:hover {
     opacity: 0.65;
 }
-
+ 
 .carrosselSeta.anterior {
     left: 25px;
 }
-
+ 
 .carrosselSeta.proximo {
     right: 20px;
 }
-
+ 
 .carrosselIndicadores {
     position: absolute;
     bottom: 52px;
@@ -891,7 +910,7 @@ header {
     gap: 30px;
     transform: translateX(-50%);
 }
-
+ 
 .indicador {
     width: 20px;
     height: 20px;
@@ -902,55 +921,55 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+ 
 .indicador.ativo {
     background-color: #FFFFFF;
 }
-
-
+ 
+ 
 @media (max-width: 1000px) {
     .carrossel {
         height: 650px;
     }
-
+ 
     .carrosselConteudo {
         width: 55%;
         margin-left: 7%;
     }
-
+ 
     .carrosselConteudo h1 {
         margin-bottom: 35px;
     }
-
+ 
     .carrosselConteudo p {
         margin-bottom: 55px;
     }
-
+ 
     .carrosselBotao {
         min-width: 220px;
         min-height: 52px;
         font-size: 20px;
     }
-
+ 
     .carrosselIndicadores {
         bottom: 35px;
     }
 }
-
+ 
 @media (max-width: 600px) {
     .carrossel {
         height: 700px;
     }
-
+ 
     .slide {
         align-items: flex-start;
     }
-
+ 
     .slide > img {
         width: 100%;
         object-position: 60% center;
     }
-
+ 
     .slide::after {
         background: linear-gradient(
             180deg,
@@ -960,50 +979,50 @@ header {
             #200044 100%
         );
     }
-
+ 
     .carrosselConteudo {
         width: auto;
         margin: 250px 28px 0;
     }
-
+ 
     .carrosselConteudo h1 {
         margin-bottom: 22px;
         font-size: 38px;
         line-height: 1.2;
     }
-
+ 
     .carrosselConteudo p {
         margin-bottom: 30px;
         font-size: 18px;
         line-height: 1.5;
     }
-
+ 
     .carrosselBotao {
         min-width: 200px;
         min-height: 50px;
         font-size: 18px;
     }
-
+ 
     .carrosselSeta {
         top: 36%;
         width: 35px;
         height: 50px;
         font-size: 35px;
     }
-
+ 
     .carrosselSeta.anterior {
         left: 5px;
     }
-
+ 
     .carrosselSeta.proximo {
         right: 5px;
     }
-
+ 
     .carrosselIndicadores {
         bottom: 25px;
         gap: 18px;
     }
-
+ 
     .indicador {
         width: 15px;
         height: 15px;
