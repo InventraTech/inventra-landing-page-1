@@ -11,7 +11,7 @@ body {
 #banner_principal{
     display: flex;
     width: 100%;
-    height: 375px;
+    min-height: 375px;
     background-image: linear-gradient(to right, #360082, #5F1AD2);
 }
 .resp{
@@ -20,8 +20,16 @@ body {
     background-color: #ffffff
 }
 .padrao{
-    width: 50%; height: 375px;
-    }
+    width: 50%; 
+    height: 375px;
+}
+.padrao img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+}
 #banner_ajuda{
     width: 51%; 
     height: 375px;
@@ -32,27 +40,36 @@ body {
     
 }        
 #pt_baixo{
-    width: 1345px; 
-    height: 917px;
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    min-height: 917px;
     background-color:#ffffff;
     padding-top: 23px;
     padding-left: 130px;
+    padding-right: 40px;
     box-sizing: border-box;
     
     }
 #faixa_amarelo{
     width: 70px;
-    height: 917px;
+    flex-shrink: 0;
     background-color: #ECC506;
 }
 #frase{
-    width: 700px; 
-    height: 200px;
-     margin: 0;
-     padding: 50px 0px 30px 130px;
-     color: #ffffff;
-     font-weight:600;
+    box-sizing: border-box;
+    max-width: 830px; 
+    margin: 0;
+    padding: 50px 0px 30px clamp(20px, 6.8vw, 130px);
+    color: #ffffff;
+    font-weight:600;
     }
+#frase p{
+    font-size: clamp(34px, 4.8vw, 80px) !important;
+}
+#voltar{
+    max-width: 100%;
+}
 #voltar p{
     padding: 50px;
     margin: 0;
@@ -61,8 +78,8 @@ body {
     margin: 0px;
     }
 #texto{
-    width: 900px;
-    height: 100px;
+    max-width: 900px;
+    min-height: 100px;
     background-color: #ffffff;
 }
 #texto p{
@@ -80,31 +97,43 @@ body {
 }
 #relatorio{
     display: flex;
-    width: 1215px;
-    height: 580px;
+    width: 100%;
+    max-width: 1215px;
     margin-top: 10px;
     margin-bottom: 70px;
     background-color: #ffffff;
 }
 #formulario{
     box-sizing: border-box;
-    width: 775px;
-    height: 570px;
-    padding: 35px 0px 0px 45px;
+    flex: 1 1 775px;
+    max-width: 775px;
+    min-width: 0;
+    min-height: 570px;
+    padding: 35px 45px 35px 45px;
     background-color: #ffffff;
     border-radius: 15px;
     border:2px solid #D5D5D5 ;
     box-shadow: 0px 0px 1px 1px rgb(0, 0, 0,0.10);
 }
 #form_resp{
-    width: 693px;
-    height: 357px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 37px;
+    align-content: start;
+    max-width: 693px;
     background-color: #ffffff;
     margin-bottom: 20px;
 }
+#form_resp br{
+    display: none;
+}
+#form_resp label:last-of-type,
+#form_resp textarea{
+    grid-column: 1 / -1;
+}
 #form_cabecalho{
     display: flex;
-    width: 600px;
+    max-width: 600px;
     height: 40px;
     background-color: #ffffff;
     margin-bottom: 45px;
@@ -119,7 +148,6 @@ body {
 .label_padrao_e{
     font-size: 17px;
     font-weight: 500; 
-    margin-right: 306px; 
     color: #3A3A3A;  
 }
 .label_padrao_d{
@@ -129,8 +157,9 @@ body {
 }
 .form_padrao_d{
     box-sizing: border-box;
-    margin: 10px 37px 20px 0px;
-    width: 320px;
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    min-width: 0;
     height: 35px;
     border-radius: 10px;
     border:1px solid #ffffff;
@@ -148,7 +177,8 @@ body {
 .form_padrao_e{
     box-sizing: border-box;
     margin: 10px 0px 20px;
-    width: 320px;
+    width: 100%;
+    min-width: 0;
     height: 35px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -167,7 +197,7 @@ body {
 textarea{
     box-sizing: border-box;
     resize: none;
-    width: 681px;
+    width: 100%;
     height: 150px;
     padding: 10px;
     border-radius: 10px;
@@ -204,11 +234,11 @@ textarea:focus{
 #avisos{
     margin-left: 35px;
     width: 405px;
-    height: 425px;
+    flex-shrink: 0;
 }
 .infos{
     box-sizing: border-box;
-    width: 405px;
+    width: 100%;
     height: 80px;
     padding: 13px;
     background-color: #ffffff;
@@ -221,17 +251,18 @@ textarea:focus{
 .infos p{
     margin-top: 0px;
     margin-left: 7px;
+    overflow-wrap: anywhere;
 }
 #horario_atend{
     box-sizing: border-box;
-    width: 405px;
-    height: 119px;
+    width: 100%;
+    min-height: 119px;
     border-radius: 15px;
     box-shadow: 0px 0px 1.5px 1.5px rgb(0, 0, 0,0.10);
 }
 #hr_cabecalho{
     box-sizing: border-box;
-    width: 405;
+    width: 100%;
     height: 45px;
     background-color: #5301C9;
     border-radius: 15px 15px 0px 0px;
@@ -245,9 +276,9 @@ textarea:focus{
 }
 #hr_descricao{
     box-sizing: border-box;
-    width: 405;
-    height: 74px;
-    padding: 10px 0px 0px 15px;
+    width: 100%;
+    min-height: 74px;
+    padding: 10px 15px 10px 15px;
     background-color: #ffffff;
     border-radius: 0px 0px 15px 15px;
     border-width: 0px 1px 1px 1px;
@@ -259,39 +290,121 @@ textarea:focus{
     margin: 0;
     color: #4A4A4A;
     font-size: 17px;
-    font-weight: 450px;
+    font-weight: 450;
 }
 #acinzentar{
     color: #4A4A4A;
 }
-#fotter{
-    display: flex;
-    align-items: center; 
+
+/* ===== Footer: largura total da página ===== */
+.rodape {
+    width: 100%;
     box-sizing: border-box;
-    width: 1442px;
-    height: 110px;
-    background-color: #FDFDFD;
-    border-top: 2px solid #D5D5D5;
-    margin-left: -130px;
-    padding: 30px 40px 30px;
+    padding: 50px 70px 20px;
+    background: linear-gradient(to right, #360182, #4A149F);
+    font-family: "K2D", sans-serif;
+    color: #FFFFFF;
 }
-#Term{
-    margin: 0px 39px 0px 255px;
+
+.rodapeConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 35px;
 }
-#Supo{
-    margin: 0px 255px 0px 39px;
+
+.rodapeLogo {
+    max-width: 270px;
 }
-.foot_padrao{
-    color: #5D5D5D;
+
+.rodapeLogo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.rodapeLogo p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #DFDFDF;
+}
+
+.rodapeColuna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 250px;
+}
+
+.rodapeColuna h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
     font-weight: 500;
+    color: #FFDC32;
 }
+
+.rodapeColuna a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodapeColuna a:hover {
+    color: #FFDC32;
+}
+
+.rodapeColuna p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #DFDFDF;
+}
+
+.rodapeColuna .linkContato {
+    margin-top: 5px;
+    font-weight: 500;
+    color: #FFDC32;
+}
+
+.rodapeColuna .linkContato:hover {
+    text-decoration: underline;
+}
+
+.rodapeInferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.rodapeInferior p {
+    margin: 0;
+    font-size: 14px;
+    color: #DFDFDF;
+}
+
+/* ===== Círculos decorativos (ancorados na base da área branca, acima do footer) ===== */
 #meio_circulo{
     width: 300px;
     height: 150px;
     background-color: #5501CC;
     border-radius: 200px 200px 0px 0px;
     position: absolute;
-    margin: 500px 0px 0px 1050px;
+    left: 1180px;
+    bottom: 0;
     z-index: 1;
 }
 #pp_circulo{
@@ -300,7 +413,8 @@ textarea:focus{
     height: 50px;
     border-radius: 50%;
     background-color: #5501CC;
-    margin: 450px 0px 0px 1100px;
+    left: 1230px;
+    bottom: 150px;
 }
 #m_circulo{
     position: absolute;
@@ -308,5 +422,148 @@ textarea:focus{
     height: 100px;
     border-radius: 50%;
     background-color: #5501CC;
-    margin: 400px 0px 0px 1220px;
+    left: 1350px;
+    bottom: 150px;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+@media (max-width: 1415px){
+    #pt_baixo{
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+    #meio_circulo{ left: auto; right: 30px; }
+    #pp_circulo{ left: auto; right: 230px; }
+    #m_circulo{ left: auto; right: 60px; }
+}
+
+@media (max-width: 1000px){
+    #relatorio{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    #formulario{
+        flex: none;
+        width: 100%;
+        max-width: none;
+    }
+    #avisos{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    #pt_baixo{
+        min-height: 0;
+    }
+    #meio_circulo,
+    #pp_circulo,
+    #m_circulo{
+        display: none;
+    }
+}
+
+@media (max-width: 900px){
+    #banner_principal{
+        flex-direction: column;
+        min-height: 0;
+    }
+    #banner_ajuda{
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+        background-size: min(500px, 90%) auto;
+    }
+    .padrao{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .padrao img{
+        height: auto;
+    }
+    #frase{
+        padding-right: 20px;
+    }
+    #voltar p{
+        padding: 30px 20px;
+    }
+    .rodape{
+        padding: 40px 30px 20px;
+    }
+    .rodapeLogo{
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    .rodapeColuna{
+        flex: 1 1 40%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px){
+    #barra_principal img{
+        padding-left: 20px !important;
+    }
+    #banner_img{
+        display: none;
+    }
+    #faixa_amarelo{
+        width: 20px;
+    }
+    #pt_baixo{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #texto p{
+        font-size: 18px;
+    }
+    #texto p br,
+    #hr_descricao p br{
+        display: none;
+    }
+    #formulario{
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 600px){
+    #banner_img{
+        display: none;
+    }
+    #form_resp{
+        grid-template-columns: 1fr;
+    }
+    #form_resp > :nth-child(1){ order: 1; }
+    #form_resp > :nth-child(4){ order: 2; }
+    #form_resp > :nth-child(2){ order: 3; }
+    #form_resp > :nth-child(5){ order: 4; }
+    #form_resp > :nth-child(6){ order: 5; }
+    #form_resp > :nth-child(9){ order: 6; }
+    #form_resp > :nth-child(7){ order: 7; }
+    #form_resp > :nth-child(10){ order: 8; }
+    #form_resp > :nth-child(11){ order: 9; }
+    #form_resp > :nth-child(13){ order: 10; }
+    #botao_enviar{
+        width: 100%;
+    }
+    #form_cabecalho p{
+        font-size: 20px;
+    }
+    .rodape{
+        padding: 35px 20px 20px;
+    }
+    .rodapeConteudo{
+        flex-direction: column;
+        gap: 28px;
+    }
+    .rodapeColuna{
+        flex: none;
+        width: 100%;
+    }
+    .rodapeInferior{
+        flex-direction: column;
+        text-align: center;
+    }
 }

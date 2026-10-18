@@ -4,7 +4,7 @@ body {
     margin: 0%;
     padding: 0%;
     overflow-x: hidden;
-    width: 1920px;
+    width: 100%;
 }
 #corpo{
     position: relative;
@@ -21,10 +21,11 @@ body {
     display: flex;
     align-items: center;
     height: 80px;
-    margin-left: 118px;
+    margin-left: clamp(20px, 6.15vw, 118px);
 }
 #logo_topo img{
     width: 245px;
+    max-width: 100%;
     margin-right: 22px;
     margin-top: -6px;
 }
@@ -36,7 +37,7 @@ body {
     left: 0;
     width: 83px;
     z-index: 5;
-    background-image: linear-gradient(to bottom, #742DD0, #3A0078);
+    background-image: linear-gradient(to bottom, #4A149F, #360182);
 }
 
 #banner_principal{
@@ -51,8 +52,8 @@ body {
     content: "";
     position: absolute;
     top: -100px;
-    left: 1318px;
-    width: 750px;
+    left: 68.65%;
+    width: 39.06%;
     height: 735px;
     background-image: linear-gradient(to left, #360082, transparent), url("utils/Logo\,\ versão\ escira\ \(2\).png");
     background-size: contain;
@@ -62,8 +63,8 @@ body {
     z-index: 0;
 }
 #banner_ajuda{
-    width: 1028px;
-    height: 453px;
+    width: 53.54%;
+    height: 100%;
     background-image: url("utils/Group 65717.svg");
     background-size: auto 100%;
     background-position: left;
@@ -86,30 +87,32 @@ body {
 }
 #frase{
     position: absolute;
-    left: 991px;
+    left: 51.61%;
     top: 137px;
-    width: 880px;
+    width: 45.83%;
     margin: 0;
     color: #ffffff;
-    font-size: 80px;
+    font-size: clamp(28px, 4.17vw, 80px);
     font-weight: 500;
-    line-height: 104px;
+    line-height: 1.3;
     z-index: 1;
 }
 
 
 #pt_baixo{
     position: relative;
-    width: 1920px;
-    height: 1354px;
+    width: 100%;
+    min-height: 1354px;
     background-color: #ffffff;
     padding-left: 275px;
+    padding-right: 40px;
     box-sizing: border-box;
     overflow: hidden;
 }
 #texto{
-    width: 1378px;
-    height: 26px;
+    width: 100%;
+    max-width: 1378px;
+    min-height: 26px;
     padding-top: 62px;
     margin-bottom: 50px;
     text-align: center;
@@ -125,13 +128,16 @@ body {
 #avisos{
     display: flex;
     gap: 47px;
-    width: 1378px;
+    width: 100%;
+    max-width: 1378px;
 }
 .infos{
     box-sizing: border-box;
-    width: 428px;
-    height: 251px;
-    padding: 28px 34px 0px 30px;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 428px;
+    min-height: 251px;
+    padding: 28px 34px 20px 30px;
     background-color: #ffffff;
     border-radius: 19px;
     border: 1px solid #D5D5D5;
@@ -196,9 +202,11 @@ body {
 }
 #formulario{
     box-sizing: border-box;
-    width: 835px;
-    height: 826px;
-    padding: 54px 36px 0px 48px;
+    flex: 1 1 835px;
+    max-width: 835px;
+    min-width: 0;
+    min-height: 826px;
+    padding: 54px 36px 30px 48px;
     background-color: #ffffff;
     border-radius: 19px;
     border: 1px solid #D5D5D5;
@@ -207,8 +215,11 @@ body {
 #form_cabecalho{
     display: flex;
     align-items: center;
-    width: 751px;
-    height: 48px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    width: 100%;
+    max-width: 751px;
+    min-height: 48px;
     margin-bottom: 49px;
 }
 #form_cabecalho p{
@@ -219,13 +230,15 @@ body {
 }
 #img_cartoes{
     width: 246px;
+    max-width: 100%;
     height: 42px;
     margin-left: auto;
     position: relative;
     top: 5px;
 }
 #form_resp{
-    width: 751px;
+    width: 100%;
+    max-width: 751px;
     margin: 0;
 }
 .grupo{
@@ -235,6 +248,10 @@ body {
     display: flex;
     gap: 17px;
     margin-bottom: 39px;
+}
+#grupo_validade > div{
+    flex: 1 1 0;
+    min-width: 0;
 }
 #grupo_cpf{
     margin-bottom: 44px;
@@ -258,7 +275,7 @@ body {
 .form_padrao_e{
     box-sizing: border-box;
     margin: 0;
-    width: 751px;
+    width: 100%;
     height: 47px;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -273,7 +290,7 @@ body {
 .form_meio_e{
     box-sizing: border-box;
     margin: 0;
-    width: 366px;
+    width: 100%;
     height: 47px;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -288,7 +305,7 @@ body {
 .form_meio_d{
     box-sizing: border-box;
     margin: 0;
-    width: 368px;
+    width: 100%;
     height: 47px;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -314,8 +331,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 17px;
-    width: 749px;
-    height: 52px;
+    width: calc(100% - 2px);
+    min-height: 52px;
+    padding: 6px 12px;
+    box-sizing: border-box;
     margin-left: -7px;
     border-radius: 10px;
     border: none;
@@ -339,12 +358,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    width: 656px;
-    height: 40px;
+    width: calc(100% - 38px);
+    max-width: 656px;
+    min-height: 40px;
+    padding: 6px 12px;
     margin: 21px 0px 0px 38px;
     border: 1px solid #5301C9;
     border-radius: 10px;
     background-color: #ffffff;
+    text-align: center;
 }
 #aviso_seguro span{
     font-size: 17.5px;
@@ -354,7 +376,8 @@ body {
 #nota_teste{
     margin: 40px 0px 0px 0px;
     padding-left: 24px;
-    width: 751px;
+    width: 100%;
+    max-width: 751px;
     box-sizing: border-box;
     text-align: center;
     font-size: 15px;
@@ -364,9 +387,10 @@ body {
 }
 #valor_final{
     box-sizing: border-box;
-    width: 505px;
-    height: 382px;
-    padding: 42px 41px 0px 37px;
+    flex: 0 1 505px;
+    min-width: 0;
+    min-height: 382px;
+    padding: 42px 41px 30px 37px;
     background-color: #ffffff;
     border-radius: 19px;
     border: 1px solid #D5D5D5;
@@ -451,52 +475,112 @@ body {
     background-image: url("utils/escudo_icon.svg");
     background-repeat: no-repeat;
 }
-#fotter{
-    display: flex;
-    align-items: center;
+
+/* ===== Footer: largura total da página ===== */
+.rodape {
+    width: 100%;
     box-sizing: border-box;
-    width: 1837px;
-    height: 163px;
-    background-color: #FDFDFD;
-    border-top: 2px solid #D5D5D5;
-    margin-left: 83px;
-    padding: 0px 107px 0px 29px;
-}
-#logo_rodape{
-    display: flex;
-    align-items: center;
-    width: 255px;
-}
-#logo_rodape img{
-    width: 250px;
-    margin-right: 22px;
-}
-.foot_padrao{
-    color: #5D5D5D;
-    font-size: 22px;
-    font-weight: 500;
-    text-decoration: none;
-}
-#Term{
-    margin: 0px 56px 0px 258px;
-}
-#Priv{
-    margin: 0px 56px 0px 0px;
-}
-#Supo{
-    margin: 0px;
-}
-#copyright{
-    margin: 0px 0px 0px auto;
-    font-size: 21px;
-    font-weight: 400;
-    color: #4A4A4A;
+    padding: 50px 70px 20px;
+    background: linear-gradient(to right, #360182, #4A149F);
+    font-family: "K2D", sans-serif;
+    color: #FFFFFF;
 }
 
+.rodapeConteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+.rodapeLogo {
+    max-width: 270px;
+}
+
+.rodapeLogo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.rodapeLogo p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #DFDFDF;
+}
+
+.rodapeColuna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 250px;
+}
+
+.rodapeColuna h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #FFDC32;
+}
+
+.rodapeColuna a {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodapeColuna a:hover {
+    color: #FFDC32;
+}
+
+.rodapeColuna p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #DFDFDF;
+}
+
+.rodapeColuna .linkContato {
+    margin-top: 5px;
+    font-weight: 500;
+    color: #FFDC32;
+}
+
+.rodapeColuna .linkContato:hover {
+    text-decoration: underline;
+}
+
+.rodapeInferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.rodapeInferior p {
+    margin: 0;
+    font-size: 14px;
+    color: #DFDFDF;
+}
+
+/* ===== Círculos decorativos (ancorados no canto inferior direito) ===== */
 #meio_circulo{
     position: absolute;
-    left: 1525px;
-    top: 1090px;
+    right: -159px;
+    bottom: -13px;
     width: 554px;
     height: 277px;
     background-color: #ECC506;
@@ -505,8 +589,8 @@ body {
 }
 #m_circulo{
     position: absolute;
-    left: 1276px;
-    top: 1227px;
+    right: 436px;
+    bottom: -81px;
     width: 208px;
     height: 208px;
     border-radius: 50%;
@@ -514,10 +598,231 @@ body {
 }
 #pp_circulo{
     position: absolute;
-    left: 1450px;
-    top: 1156px;
+    right: 366px;
+    bottom: 94px;
     width: 104px;
     height: 104px;
     border-radius: 50%;
     background-color: #ECC506;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* Banner com altura fixa; em telas menores a imagem é cortada pela esquerda,
+   mantendo a curva da borda direita e sem invadir a frase */
+@media (max-width: 1920px){
+    #banner_ajuda{
+        background-position: right center;
+    }
+}
+
+@media (max-width: 1700px){
+    #pt_baixo{
+        padding-left: 160px;
+    }
+    #meio_circulo{ right: -111px; bottom: -9px; width: 388px; height: 194px; border-radius: 194px 194px 0px 0px; }
+    #m_circulo{ right: 305px; bottom: -57px; width: 146px; height: 146px; }
+    #pp_circulo{ right: 256px; bottom: 66px; width: 73px; height: 73px; }
+}
+
+@media (max-width: 1500px){
+    #meio_circulo{ right: -95px; bottom: -8px; width: 332px; height: 166px; border-radius: 166px 166px 0px 0px; }
+    #m_circulo{ right: 262px; bottom: -49px; width: 125px; height: 125px; }
+    #pp_circulo{ right: 220px; bottom: 56px; width: 62px; height: 62px; }
+}
+
+@media (max-width: 1280px){
+    #faixa_lateral{
+        width: 50px;
+    }
+    #pt_baixo{
+        padding-left: 90px;
+        padding-bottom: 200px;
+        min-height: 0;
+    }
+    #relatorio{
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 50px;
+    }
+    #formulario,
+    #valor_final{
+        flex: none;
+        width: 100%;
+        max-width: 835px;
+    }
+    #valor_final{
+        margin-top: 0;
+    }
+    #meio_circulo{ right: -80px; bottom: -4px; width: 277px; height: 139px; border-radius: 139px 139px 0px 0px; }
+    #m_circulo{ right: 220px; bottom: -40px; width: 104px; height: 104px; }
+    #pp_circulo{ right: 180px; bottom: 60px; width: 52px; height: 52px; }
+}
+
+@media (max-width: 1100px){
+    #faixa_lateral{
+        width: 40px;
+    }
+    #pt_baixo{
+        padding-left: 70px;
+    }
+    #avisos{
+        flex-direction: column;
+        max-width: 835px;
+    }
+    .infos{
+        flex: none;
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+    }
+    .infos:nth-child(2),
+    .infos:nth-child(3){
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 900px){
+    .rodape{
+        padding: 40px 30px 20px;
+    }
+    .rodapeLogo{
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    .rodapeColuna{
+        flex: 1 1 40%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px){
+    #texto{
+        padding-top: 40px;
+        margin-bottom: 30px;
+    }
+    #texto p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .infos h2{
+        font-size: 26px;
+    }
+    #form_cabecalho p{
+        font-size: 24px;
+    }
+    .label_padrao_e,
+    .label_padrao_d{
+        font-size: 18px;
+    }
+    #valor_final h2{
+        font-size: 26px;
+    }
+    .vf_cinza,
+    .vf_escuro,
+    #vf_preco_depois{
+        font-size: 18px;
+    }
+    #vf_preco_hoje{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 600px){
+    #logo_topo img{
+        width: 170px;
+    }
+    #faixa_lateral{
+        top: 400px;
+        width: 20px;
+    }
+    #banner_principal{
+        height: 320px;
+    }
+    #banner_ajuda{
+        display: none;
+    }
+    #banner_principal::after{
+        top: -10%;
+        left: auto;
+        right: -8%;
+        width: 92%;
+        height: 120%;
+        background-position: right center;
+    }
+    #voltar{
+        top: 14px;
+        left: 24px;
+    }
+    #voltar img{
+        width: 90px;
+    }
+    #frase{
+        left: 24px;
+        right: 24px;
+        top: 90px;
+        width: auto;
+        font-size: clamp(28px, 8.5vw, 44px);
+    }
+    #pt_baixo{
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+    #formulario{
+        min-height: 0;
+        padding: 30px 20px 25px 20px;
+    }
+    #form_cabecalho{
+        margin-bottom: 30px;
+    }
+    #form_cabecalho p{
+        font-size: 20px;
+    }
+    #img_cartoes{
+        margin-left: 0;
+        height: auto;
+        top: 0;
+    }
+    #grupo_validade{
+        flex-direction: column;
+        gap: 29px;
+    }
+    #botao_enviar{
+        width: 100%;
+        margin-left: 0;
+        font-size: 16px;
+    }
+    #aviso_seguro{
+        width: 100%;
+        margin-left: 0;
+    }
+    #aviso_seguro span{
+        font-size: 15px;
+    }
+    #nota_teste{
+        padding-left: 0;
+    }
+    #valor_final{
+        min-height: 0;
+        padding: 30px 20px 25px 20px;
+    }
+    #vf_preco_depois{
+        margin-right: 0;
+        padding: 0;
+    }
+    .rodape{
+        padding: 35px 20px 20px;
+    }
+    .rodapeConteudo{
+        flex-direction: column;
+        gap: 28px;
+    }
+    .rodapeColuna{
+        flex: none;
+        width: 100%;
+    }
+    .rodapeInferior{
+        flex-direction: column;
+        text-align: center;
+    }
 }
