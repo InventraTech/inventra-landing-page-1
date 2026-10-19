@@ -316,3 +316,7 @@ header {
         gap: 10px;
     }
 }
+
+.voltarPagina {
+    transition: color 0.25s ease;
+}

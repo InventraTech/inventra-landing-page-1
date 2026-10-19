@@ -118,9 +118,8 @@ header {
     height: 50px;
     margin-top: 60px;
     margin-left: 70px;
-    padding-right: 40px;
+    padding-left: 35px;
     padding-bottom: 2px;
-    padding-left: 20px;
     background-color: #FFDC32;
     border: none;
     border-radius: 8px;
@@ -176,7 +175,6 @@ header {
     text-align: center;
 }
  
-/* ---------- Cards de recursos ---------- */
 .recursosGrid {
     position: relative;
     z-index: 2;
@@ -1026,5 +1024,91 @@ header {
     .indicador {
         width: 15px;
         height: 15px;
+    }
+}
+
+.botHeader {
+    background: linear-gradient(to right, #6732FF 0%, #3E1E99 50%, #2B1370 100%);
+    background-size: 200% 100%;
+    background-position: left center;
+    cursor: pointer;
+    transition: background-position 0.35s ease, transform 0.3s ease;
+}
+
+.botHeader:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+}
+
+.botHeader:active {
+    transform: translateY(0);
+}
+
+.comeceGratuitamente,
+.entreEmContato,
+.cardBot1 {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.comeceGratuitamente:hover,
+.entreEmContato:hover,
+.cardBot1:hover {
+    background-color: #F0C400;
+    transform: translateY(-2px);
+}
+
+.comeceGratuitamente:active,
+.entreEmContato:active,
+.cardBot1:active {
+    background-color: #E0B600;
+    transform: translateY(0);
+}
+
+.comeceGratuitamente img {
+    transition: transform 0.3s ease;
+}
+
+.comeceGratuitamente:hover img {
+    transform: translateX(4px);
+}
+
+.cardBot2 {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cardBot2:hover {
+    background-color: #E9E1FA;
+    color: #4A149F;
+    transform: translateY(-2px);
+}
+
+.cardBot2:active {
+    background-color: #DCD0F5;
+    transform: translateY(0);
+}
+
+.indicador:not(.ativo):hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .botHeader,
+    .comeceGratuitamente,
+    .entreEmContato,
+    .cardBot1,
+    .cardBot2,
+    .comeceGratuitamente img {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .botHeader:hover,
+    .comeceGratuitamente:hover,
+    .entreEmContato:hover,
+    .cardBot1:hover,
+    .cardBot2:hover,
+    .comeceGratuitamente:hover img {
+        transform: none;
     }
 }

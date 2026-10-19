@@ -1,4 +1,4 @@
-  body{
+body{
     margin-top: 15px;
     margin-right: 20px;
     background-repeat: no-repeat; 
@@ -319,3 +319,41 @@ footer p{
         font-size: 14px;
     }
 }
+
+.botoes_entrar_conta {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.botoes_entrar_conta:hover {
+    transform: translateY(-2px);
+}
+
+.botoes_entrar_conta:active {
+    transform: translateY(0);
+}
+
+#entrar_site {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#entrar_site:hover {
+    background-color: #240057;
+    transform: translateY(-2px);
+}
+
+#entrar_site:active {
+    background-color: #1A0040;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .botoes_entrar_conta,
+    #entrar_site {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .botoes_entrar_conta:hover,
+    #entrar_site:hover {
+        transform: none;
+    }
+}   
