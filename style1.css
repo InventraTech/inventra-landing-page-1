@@ -118,8 +118,9 @@ header {
     height: 50px;
     margin-top: 60px;
     margin-left: 70px;
-    padding-left: 35px;
+    padding-right: 40px;
     padding-bottom: 2px;
+    padding-left: 20px;
     background-color: #FFDC32;
     border: none;
     border-radius: 8px;
@@ -175,6 +176,7 @@ header {
     text-align: center;
 }
  
+/* ---------- Cards de recursos ---------- */
 .recursosGrid {
     position: relative;
     z-index: 2;
@@ -1110,5 +1112,410 @@ header {
     .cardBot2:hover,
     .comeceGratuitamente:hover img {
         transform: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .b1,
+    .b2,
+    .b3 {
+        box-sizing: border-box;
+        width: calc((100vw - 200px) / 3);
+        max-width: 434px;
+    }
+
+    .texto4,
+    .texto5,
+    .texto6 {
+        margin-left: max(24px, 8%);
+    }
+
+    .imagemGrupo {
+        width: 50%;
+    }
+
+    .bloco4 {
+        height: auto;
+        min-height: 582px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    .texto7 {
+        margin-left: 50%;
+        padding: 80px 24px 80px;
+        box-sizing: border-box;
+    }
+
+    .texto8 {
+        margin-left: 50%;
+        margin-right: 24px;
+        font-size: 20px;
+    }
+
+    .texto5 br,
+    .texto8 br,
+    .texto10 br {
+        display: none;
+    }
+
+    .texto5 {
+        max-width: calc(100% - 740px);
+    }
+
+    .texto6 {
+        font-size: 42px;
+    }
+
+    .bloco5 {
+        height: auto;
+        min-height: 503px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    .texto10 {
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 1320px) {
+    .bloco2 {
+        display: none;
+    }
+
+    .texto2 {
+        margin: 40px 0 0;
+        padding: 60px 24px 0;
+        background-color: #FFFFFF;
+        font-size: 38px;
+    }
+
+    .texto2 br,
+    .texto3 br {
+        display: none;
+    }
+
+    .texto3 {
+        margin: 0;
+        padding: 16px 24px 0;
+        background-color: #FFFFFF;
+    }
+
+    .recursosGrid {
+        grid-template-columns: repeat(2, minmax(0, 404px));
+        margin-top: 0;
+        padding: 40px 24px 60px;
+        background-color: #FFFFFF;
+    }
+
+    .BigNumbers {
+        margin-top: 0;
+    }
+
+    .recursoCard {
+        width: 100%;
+        height: auto;
+        min-height: 184px;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 0 24px;
+    }
+
+    .logotipo img {
+        margin-left: 0;
+    }
+
+    .menu {
+        gap: 20px;
+        margin-left: auto;
+    }
+
+    .botHeader {
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .titulo {
+        margin: 40px 24px 0;
+        font-size: 52px;
+    }
+
+    .imagemBLoco1 img {
+        position: static;
+        z-index: auto;
+        display: block;
+        width: calc(100% - 48px);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .texto1 {
+        margin: 24px 24px 0;
+        font-size: 20px;
+    }
+
+    .texto1 br,
+    .texto11 br,
+    .cardSubt br {
+        display: none;
+    }
+
+    .comeceGratuitamente {
+        margin: 32px 24px 0;
+    }
+
+    .info1 img {
+        width: calc(100% - 48px);
+        max-width: 550px;
+        margin: 40px 24px 0;
+    }
+
+    .imagem4 {
+        position: static;
+        display: block;
+        width: calc(100% - 48px);
+        max-width: 600px;
+        margin: 40px auto 0;
+    }
+
+    .texto4,
+    .texto5,
+    .texto6 {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .texto5 {
+        max-width: none;
+        font-size: 20px;
+    }
+
+    .texto6 {
+        font-size: 40px;
+    }
+
+    .b1,
+    .b2,
+    .b3 {
+        justify-self: center;
+        width: calc(100% - 48px);
+        max-width: 560px;
+        height: 176px;
+        margin: 0 auto 20px;
+    }
+
+    .b1 {
+        top: 196px;
+    }
+
+    .b2 {
+        top: -196px;
+    }
+
+    .bloco4 {
+        min-height: 0;
+        margin-top: 42px;
+        padding-bottom: 40px;
+    }
+
+    .imagemGrupo {
+        position: static;
+        width: calc(100% - 48px);
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .texto7 {
+        margin: 24px 24px 0;
+        padding: 0;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .texto8 {
+        margin: 12px 24px 0;
+        font-size: 18px;
+    }
+
+    .bloco5 {
+        min-height: 0;
+        padding-bottom: 50px;
+    }
+
+    .imagem5 {
+        position: static;
+        display: block;
+        width: calc(100% - 48px);
+        max-width: 640px;
+        margin: 0 auto 24px;
+    }
+
+    .texto9 {
+        padding-left: 24px;
+        font-size: 40px;
+    }
+
+    .texto10 {
+        max-width: none;
+        margin: 0 24px;
+        font-size: 18px;
+    }
+
+    .entreEmContato {
+        margin: 32px 24px 0;
+    }
+
+    .bloco6 {
+        flex-direction: column;
+        height: auto;
+        padding: 48px 24px;
+        box-sizing: border-box;
+    }
+
+    .texto11 {
+        margin: 0 0 24px;
+        font-size: 24px;
+    }
+
+    .imagem6 {
+        position: static;
+        width: 200px;
+        margin-top: 0;
+    }
+
+    .bloco7 {
+        height: auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .card1 {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        margin-bottom: 0;
+        padding: 32px 20px;
+        box-sizing: border-box;
+    }
+
+    .cardTit {
+        margin-top: 0;
+        font-size: 32px;
+    }
+
+    .cardSubt {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+
+    .botHeader {
+        margin-left: auto;
+    }
+
+    .recursosGrid {
+        grid-template-columns: minmax(0, 404px);
+    }
+
+    .BigNumbers {
+        flex-wrap: wrap;
+        row-gap: 24px;
+        padding: 32px 0;
+    }
+
+    .number {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 12px;
+    }
+
+    .number span {
+        font-size: 44px;
+    }
+
+    .number p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 38px;
+    }
+
+    .texto1,
+    .texto3,
+    .texto5,
+    .texto10 {
+        font-size: 17px;
+    }
+
+    .texto2 {
+        font-size: 30px;
+    }
+
+    .texto4,
+    .texto7,
+    .texto9 {
+        font-size: 34px;
+    }
+
+    .texto6 {
+        font-size: 30px;
+    }
+
+    .texto8 {
+        font-size: 17px;
+    }
+
+    .passoTexto {
+        font-size: 15px;
+    }
+
+    .passoTopo {
+        gap: 18px;
+    }
+
+    .texto11 {
+        font-size: 20px;
+    }
+
+    .cardTit {
+        font-size: 26px;
+    }
+
+    .cardSubt {
+        font-size: 16px;
+    }
+
+    .cardSub2 {
+        font-size: 15px;
+    }
+
+    .Botoes {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .comeceGratuitamente {
+        width: auto;
+        max-width: calc(100% - 48px);
+        font-size: 18px;
+    }
+
+    .botHeader {
+        width: auto;
+        padding: 0 18px 3px;
     }
 }
