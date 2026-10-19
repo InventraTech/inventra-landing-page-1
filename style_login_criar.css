@@ -60,6 +60,10 @@ header{
     gap: 115upx;
 }
 
+.imagotipo {
+    margin-left: 115px;
+}
+
 #title{
     color: #3A3A3A;
     font-weight: 540;

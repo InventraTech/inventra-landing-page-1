@@ -18,6 +18,17 @@ body{
     z-index: 1;
 }
 
+.voltarInicio{
+    width: 200px;
+    margin-right: -90px;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+
 .mascote {
     position: relative;
     height: 360px;
@@ -59,6 +70,10 @@ header{
 .A {
     display: flex;
     gap: 115upx;
+}
+
+.imagotipo {
+    margin-left: 115px;
 }
 
 #title{
