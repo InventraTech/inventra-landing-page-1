@@ -52,6 +52,15 @@ header{
     text-align: center;
 }
 
+.voltarLogin {
+    margin-left: 40px;
+}
+
+.A {
+    display: flex;
+    gap: 115upx;
+}
+
 #title{
     color: #3A3A3A;
     font-weight: 540;
