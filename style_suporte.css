@@ -1,3 +1,6 @@
+:root{
+    --banner-h: min(375px, 24vw);
+}
 body {
     font-family: "K2D", sans-serif;
     background-color: white;
@@ -11,7 +14,7 @@ body {
 #banner_principal{
     display: flex;
     width: 100%;
-    min-height: 375px;
+    min-height: var(--banner-h);
     background-image: linear-gradient(to right, #360082, #5F1AD2);
 }
 .resp{
@@ -20,21 +23,26 @@ body {
     background-color: #ffffff
 }
 .padrao{
-    width: 50%; 
-    height: 375px;
+    flex: 0 1 auto;
+    max-width: 50%;
+    height: var(--banner-h);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
 }
 .padrao img{
     display: block;
-    width: 100%;
+    flex: none;
     height: 100%;
-    object-fit: contain;
-    object-position: right center;
+    width: auto;
+    max-width: none;
 }
 #banner_ajuda{
-    width: 51%; 
-    height: 375px;
+    flex: 1 1 0;
+    min-width: 0;
+    height: var(--banner-h);
     background-image: url("utils/Logo\,\ versão\ escira\ \(1\).png");
-    background-size: 500px, cover;
+    background-size: calc(var(--banner-h) * 1.3333), cover;
     background-position: left;
     background-repeat: no-repeat; 
     
@@ -60,7 +68,7 @@ body {
     box-sizing: border-box;
     max-width: 830px; 
     margin: 0;
-    padding: 50px 0px 30px clamp(20px, 6.8vw, 130px);
+    padding: calc(var(--banner-h) * 0.1333) 0px calc(var(--banner-h) * 0.08) clamp(20px, 6.8vw, 130px);
     color: #ffffff;
     font-weight:600;
     }
@@ -69,9 +77,13 @@ body {
 }
 #voltar{
     max-width: 100%;
+    height: calc(var(--banner-h) * 0.1333);
+}
+#voltar img{
+    width: calc(var(--banner-h) * 0.2267);
 }
 #voltar p{
-    padding: 50px;
+    padding: calc(var(--banner-h) * 0.1333);
     margin: 0;
 }
 #voltar a{
@@ -296,7 +308,6 @@ textarea:focus{
     color: #4A4A4A;
 }
 
-/* ===== Footer: largura total da página ===== */
 .rodape {
     width: 100%;
     box-sizing: border-box;
@@ -396,7 +407,6 @@ textarea:focus{
     color: #DFDFDF;
 }
 
-/* ===== Círculos decorativos (ancorados na base da área branca, acima do footer) ===== */
 #meio_circulo{
     width: 300px;
     height: 150px;
@@ -425,8 +435,6 @@ textarea:focus{
     left: 1350px;
     bottom: 150px;
 }
-
-/* ===================== RESPONSIVIDADE ===================== */
 
 @media (max-width: 1415px){
     #pt_baixo{
@@ -464,23 +472,32 @@ textarea:focus{
 }
 
 @media (max-width: 900px){
+    :root{
+        --banner-h: 375px;
+    }
     #banner_principal{
         flex-direction: column;
         min-height: 0;
     }
     #banner_ajuda{
+        flex: none;
         width: 100%;
         height: auto;
         min-height: 260px;
         background-size: min(500px, 90%) auto;
     }
     .padrao{
+        display: block;
+        flex: none;
         width: 100%;
+        max-width: none;
         height: auto;
+        overflow: visible;
         box-sizing: border-box;
         padding: 0;
     }
     .padrao img{
+        width: 100%;
         height: auto;
     }
     #frase{
