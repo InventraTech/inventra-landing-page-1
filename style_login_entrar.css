@@ -250,6 +250,8 @@ footer p{
 }
 @media (max-width: 1200px) {
     #login {
+        position: relative;
+        z-index: 3;
         margin-right: 40px;
     }
 
@@ -260,11 +262,14 @@ footer p{
 
 @media (max-width: 900px) {
     body {
+        align-items: flex-start;
         justify-content: center;
         margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 0;
         padding: 20px 0;
         box-sizing: border-box;
-        min-height: 100vh;
+        min-height: calc(100vh - 15px);
     }
 
     .elemento_login,
@@ -280,7 +285,7 @@ footer p{
     }
 
     header {
-        width: 100%;
+        width: calc(100% + 40px);
     }
 
     .botoes_entrar_conta,
@@ -295,6 +300,12 @@ footer p{
     form {
         width: 100%;
         box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #entrar_site {
+        margin-left: 0;
     }
 
     .botao_padrao {
@@ -311,8 +322,26 @@ footer p{
     }
 
     header {
+        width: 100%;
         height: auto;
         min-height: 125px;
+    }
+
+    .A {
+        position: relative;
+        justify-content: center;
+    }
+
+    .voltarLogin {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: 0;
+        transform: translateY(-50%);
+    }
+
+    .imagotipo {
+        margin-left: 0;
     }
 
     #title {
@@ -338,9 +367,16 @@ footer p{
     }
 
     form label,
-    form input,
     #entrar_site {
         font-size: 14px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+    footer p br {
+        display: none;
     }
 }
 
@@ -401,5 +437,11 @@ footer p{
         width: 100%;
         margin: 4px 0;
         padding: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .voltarInicio {
+        display: none;
     }
 }

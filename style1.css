@@ -3,7 +3,7 @@ body {
     padding-top: 80px;
     background-color: #F5F5F5;
     overflow-x: hidden;
-}
+} 
  
 header {
     position: fixed;
@@ -29,7 +29,7 @@ header {
 .logotipo img {
     width: 120px;
     height: auto;
-    margin-left: -120px;
+    margin-left: -133px;
 }
  
 .menu {

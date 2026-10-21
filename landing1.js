@@ -7,7 +7,7 @@ let slideAtual = 0;
 let intervalo;
 
 function mostrarSlide(indice) {
-    slides[slideAtual].classList.remove("ativo");
+    slides[slideAtual].classList.remove("ativo"); 
     indicadores[slideAtual].classList.remove("ativo");
 
     slideAtual = (indice + slides.length) % slides.length;
