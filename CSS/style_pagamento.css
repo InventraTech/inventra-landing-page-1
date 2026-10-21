@@ -59,7 +59,7 @@ body {
     left: 68.65%;
     width: 39.06%;
     height: 162.25%;
-    background-image: linear-gradient(to left, #360082, transparent), url("utils/Logo\,\ versão\ escira\ \(2\).png");
+    background-image: linear-gradient(to left, #360082, transparent), url("../utils/logo-banner-pagamento.png");
     background-size: contain;
     background-repeat: no-repeat;
     filter: brightness(0.6);
@@ -69,7 +69,7 @@ body {
 #banner_ajuda{
     width: 53.54%;
     height: 100%;
-    background-image: url("utils/Group 65717.svg");
+    background-image: url("../utils/img-banner-pagamento.svg");
     background-size: auto 100%;
     background-position: left;
     background-repeat: no-repeat;
@@ -194,7 +194,7 @@ body {
     top: 7px;
     width: 14px;
     height: 14px;
-    background-image: url("utils/certinho.svg") ;
+    background-image: url("../utils/sinal-verificado-icon.svg") ;
     background-size: cover;
     background-repeat: no-repeat;
 }

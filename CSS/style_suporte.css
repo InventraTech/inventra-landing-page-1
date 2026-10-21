@@ -1,5 +1,6 @@
 :root{
     --banner-h: min(375px, 24vw);
+    --circulo: clamp(150px, 19.6vw, 300px);
 }
 body {
     font-family: "K2D", sans-serif;
@@ -115,13 +116,18 @@ body {
     margin-bottom: 70px;
     background-color: #ffffff;
 }
-#formulario{
-    box-sizing: border-box;
-    flex: 1 1 775px;
+#relatorio > form{
+    flex: 0 1 775px;
+    width: 775px;
     max-width: 775px;
     min-width: 0;
-    min-height: 570px;
-    padding: 35px 45px 35px 45px;
+    margin: 0;
+}
+#formulario{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 576px;
+    padding: 35px 45px 30px 45px;
     background-color: #ffffff;
     border-radius: 15px;
     border:2px solid #D5D5D5 ;
@@ -130,7 +136,7 @@ body {
 #form_resp{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 37px;
+    column-gap: 17px;
     align-content: start;
     max-width: 693px;
     background-color: #ffffff;
@@ -210,7 +216,7 @@ textarea{
     box-sizing: border-box;
     resize: none;
     width: 100%;
-    height: 150px;
+    height: 142px;
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #ffffff;
@@ -408,32 +414,35 @@ textarea:focus{
 }
 
 #meio_circulo{
-    width: 300px;
-    height: 150px;
+    width: var(--circulo);
+    height: calc(var(--circulo) / 2);
     background-color: #5501CC;
-    border-radius: 200px 200px 0px 0px;
+    border-radius: var(--circulo) var(--circulo) 0px 0px;
     position: absolute;
-    left: 1180px;
+    right: calc(var(--circulo) * -0.07);
     bottom: 0;
     z-index: 1;
+    pointer-events: none;
 }
 #pp_circulo{
     position: absolute;
-    width: 50px;    
-    height: 50px;
+    width: calc(var(--circulo) / 6);
+    height: calc(var(--circulo) / 6);
     border-radius: 50%;
     background-color: #5501CC;
-    left: 1230px;
-    bottom: 150px;
+    right: calc(var(--circulo) * 0.597);
+    bottom: calc(var(--circulo) / 2);
+    pointer-events: none;
 }
 #m_circulo{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: calc(var(--circulo) / 3);
+    height: calc(var(--circulo) / 3);
     border-radius: 50%;
     background-color: #5501CC;
-    left: 1350px;
-    bottom: 150px;
+    right: calc(var(--circulo) * 0.03);
+    bottom: calc(var(--circulo) / 2);
+    pointer-events: none;
 }
 
 @media (max-width: 1415px){
@@ -441,9 +450,6 @@ textarea:focus{
         padding-left: 50px;
         padding-right: 30px;
     }
-    #meio_circulo{ left: auto; right: 30px; }
-    #pp_circulo{ left: auto; right: 230px; }
-    #m_circulo{ left: auto; right: 60px; }
 }
 
 @media (max-width: 1000px){
@@ -451,10 +457,14 @@ textarea:focus{
         flex-direction: column;
         margin-bottom: 50px;
     }
-    #formulario{
+    #relatorio > form{
         flex: none;
         width: 100%;
         max-width: none;
+    }
+    #formulario{
+        width: 100%;
+        min-height: 0;
     }
     #avisos{
         width: 100%;
