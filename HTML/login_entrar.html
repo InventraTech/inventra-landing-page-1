@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventra</title>
+    <link rel="icon" type="Image/png" href="../elementos_visuais/logo_imagotipo.png">
+    <link rel="stylesheet" href="../CSS/style_login_entrar.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>
+
+</head>
+<body>
+
+    <img class="elemento_login" src="../elementos_login/elemento_login.svg" alt="">
+    <a href="landing_1.html">
+        <img class="voltarInicio" src="../elementos_login/voltar_inicio.svg" alt="">
+    </a>
+    <img class="mascote" src="../elementos_visuais/Caixito.png" alt="">
+    
+    <div id="login">
+        <header>
+            <div class="A">
+                <a href="../HTML/landing_1.html">
+                    <img class="voltarLogin" src="../elementos_login/voltar_login.svg" alt="">
+                </a>
+                <img class="imagotipo" src="../elementos_visuais/logo_imagotipo.png" width="50">
+            </div>
+            <h1 id="title">Comece com o <spam id="roxo">Inventra</spam></h1>
+            <p id="descricao_head">Crie sua conta gratuita ou entre para continuar.</p>
+        </header>
+
+        <button class="botoes_entrar_conta">
+            <img src="../elementos_login/google_logo.png">
+            <p>Continuar com Google</p>
+        </button>
+
+        <button class="botoes_entrar_conta">
+            <img src="../elementos_login/microsoft_logo.png">
+            <p>Continuar com Microsoft</p>
+        </button>
+
+        <div id="separador">
+            <div class="linha"></div>
+            <span>ou com E-mail</span>
+            <div class="linha"></div>
+        </div>
+
+        <div id="trocar_de_log">
+            <a class="link_botao" href="../HTML/login_criar_conta.html">
+                <button  id="criar_cont" class="botao_padrao">
+                    Criar conta
+                </button>
+            </a>
+
+            <button  id="entrar_cont" class="botao_padrao">
+                <p>Entrar</p>
+            </button>
+        </div>
+
+        <form>
+            <label for="email">E-mail</label><br>
+            <input  name="email" type="email" placeholder="voce@empresa.com" required><br>
+            <label for="senha">Senha</label><br>
+            <input  name="senha" type="password" placeholder="Digite sua senha" required>
+            <button id="entrar_site" type="submit">
+                <p>Criar conta grátis</p>
+            </button>
+        </form>
+        
+        <footer>
+            <p>Ao criar uma conta você concorda com nossos Termos e<br> Política de Privacidade.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
