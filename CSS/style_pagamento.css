@@ -59,7 +59,7 @@ body {
     left: 68.65%;
     width: 39.06%;
     height: 162.25%;
-    background-image: linear-gradient(to left, #360082, transparent), url("../utils/logo-banner-pagamento.png");
+    background-image: linear-gradient(to left, #360082, transparent), url("../utils/logo-banner-suporte.png");
     background-size: contain;
     background-repeat: no-repeat;
     filter: brightness(0.6);

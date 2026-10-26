@@ -42,7 +42,7 @@ body {
     flex: 1 1 0;
     min-width: 0;
     height: var(--banner-h);
-    background-image: url("../utils/logo-banner-suporte.png");
+    background-image: url("../utils/logo-banner-pagamento.png");
     background-size: calc(var(--banner-h) * 1.3333), cover;
     background-position: left;
     background-repeat: no-repeat; 
