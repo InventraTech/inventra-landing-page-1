@@ -30,7 +30,7 @@ header {
 .voltarPagina {
     display: inline-flex;
     align-items: center;
-    color: #360182;
+    color: #5D5D5D;
     font-size: 17px;
     text-decoration: none;
     font-family: 'K2D', sans-serif;
@@ -46,7 +46,7 @@ header {
     font-family: 'K2D', sans-serif;
 }
 .voltarPagina:hover {
-    color: #5A01D9;
+    color: #3E1E99;
 }
 .privacidadeTitulo {
     max-width: 850px;
