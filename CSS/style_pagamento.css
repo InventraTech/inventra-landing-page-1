@@ -1,6 +1,3 @@
-:root{
-    --banner-h: min(453px, 30.2vw);
-}
 body {
     font-family: "K2D", sans-serif;
     background-color: white;
@@ -50,7 +47,7 @@ header {
 
 #faixa_lateral{
     position: absolute;
-    top: calc(80px + var(--banner-h));
+    top: calc(80px + min(453px, 30.2vw));
     bottom: 0;
     left: 0;
     width: 83px;
@@ -62,7 +59,7 @@ header {
     position: relative;
     display: flex;
     width: 100%;
-    height: var(--banner-h);
+    height: min(453px, 30.2vw);
     background-image: linear-gradient(to left, #360082, #742DD0);
     overflow: hidden;
 }
@@ -531,6 +528,18 @@ header {
     line-height: 1.7;
     color: #DFDFDF;
 }
+.rodapeLogo .linkAdmin {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodapeLogo .linkAdmin:hover {
+    color: #FFDC32;
+}
 
 .rodapeColuna {
     display: flex;
@@ -651,15 +660,13 @@ header {
 }
 
 @media (min-width: 1500px) and (max-width: 1700px){
-    :root{
-        --banner-h: 362px;
-    }
+    #banner_principal{ height: 362px; }
     #corpo{ padding-top: 80px; }
     #barra_principal{ height: 64px; }
     #logo_topo{ height: 64px; }
     #logo_topo img{ width: 196px; margin-right: 18px; margin-top: -5px; }
 
-    #faixa_lateral{ top: calc(80px + var(--banner-h)); width: 66px; }
+    #faixa_lateral{ top: 442px; width: 66px; }
 
     #voltar{ top: 11px; left: 33px; gap: 10px; }
     #voltar img{ width: 92px; }
@@ -831,10 +838,11 @@ header {
     #logo_topo img{
         width: 170px;
     }
-    :root{
-        --banner-h: 320px;
+    #banner_principal{
+        height: 320px;
     }
     #faixa_lateral{
+        top: 400px;
         width: 20px;
     }
     #banner_ajuda{
