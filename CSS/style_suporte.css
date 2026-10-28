@@ -1,7 +1,3 @@
-:root{
-    --banner-h: min(375px, 24vw);
-    --circulo: clamp(150px, 19.6vw, 300px);
-}
 body {
     font-family: "K2D", sans-serif;
     background-color: white;
@@ -49,7 +45,7 @@ header {
 #banner_principal{
     display: flex;
     width: 100%;
-    min-height: var(--banner-h);
+    min-height: min(375px, 24vw);
     background-image: linear-gradient(to right, #360082, #5F1AD2);
 }
 .resp{
@@ -60,7 +56,7 @@ header {
 .padrao{
     flex: 0 1 auto;
     max-width: 50%;
-    height: var(--banner-h);
+    height: min(375px, 24vw);
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
@@ -75,9 +71,9 @@ header {
 #banner_ajuda{
     flex: 1 1 0;
     min-width: 0;
-    height: var(--banner-h);
+    height: min(375px, 24vw);
     background-image: url("../utils/logo-banner-pagamento.png");
-    background-size: calc(var(--banner-h) * 1.3333), cover;
+    background-size: calc(min(375px, 24vw) * 1.3333), cover;
     background-position: left;
     background-repeat: no-repeat; 
     
@@ -103,7 +99,7 @@ header {
     box-sizing: border-box;
     max-width: 830px; 
     margin: 0;
-    padding: calc(var(--banner-h) * 0.1333) 0px calc(var(--banner-h) * 0.08) clamp(20px, 6.8vw, 130px);
+    padding: calc(min(375px, 24vw) * 0.1333) 0px calc(min(375px, 24vw) * 0.08) clamp(20px, 6.8vw, 130px);
     color: #ffffff;
     font-weight:600;
     }
@@ -112,13 +108,13 @@ header {
 }
 #voltar{
     max-width: 100%;
-    height: calc(var(--banner-h) * 0.1333);
+    height: calc(min(375px, 24vw) * 0.1333);
 }
 #voltar img{
-    width: calc(var(--banner-h) * 0.2267);
+    width: calc(min(375px, 24vw) * 0.2267);
 }
 #voltar p{
-    padding: calc(var(--banner-h) * 0.1333);
+    padding: calc(min(375px, 24vw) * 0.1333);
     margin: 0;
 }
 #voltar a{
@@ -383,6 +379,19 @@ textarea:focus{
     color: #DFDFDF;
 }
 
+.rodapeLogo .linkAdmin {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodapeLogo .linkAdmin:hover {
+    color: #FFDC32;
+}
+
 .rodapeColuna {
     display: flex;
     flex-direction: column;
@@ -445,34 +454,34 @@ textarea:focus{
 }
 
 #meio_circulo{
-    width: var(--circulo);
-    height: calc(var(--circulo) / 2);
+    width: clamp(150px, 19.6vw, 300px);
+    height: calc(clamp(150px, 19.6vw, 300px) / 2);
     background-color: #5501CC;
-    border-radius: var(--circulo) var(--circulo) 0px 0px;
+    border-radius: clamp(150px, 19.6vw, 300px) clamp(150px, 19.6vw, 300px) 0px 0px;
     position: absolute;
-    right: calc(var(--circulo) * -0.07);
+    right: calc(clamp(150px, 19.6vw, 300px) * -0.07);
     bottom: 0;
     z-index: 1;
     pointer-events: none;
 }
 #pp_circulo{
     position: absolute;
-    width: calc(var(--circulo) / 6);
-    height: calc(var(--circulo) / 6);
+    width: calc(clamp(150px, 19.6vw, 300px) / 6);
+    height: calc(clamp(150px, 19.6vw, 300px) / 6);
     border-radius: 50%;
     background-color: #5501CC;
-    right: calc(var(--circulo) * 0.597);
-    bottom: calc(var(--circulo) / 2);
+    right: calc(clamp(150px, 19.6vw, 300px) * 0.597);
+    bottom: calc(clamp(150px, 19.6vw, 300px) / 2);
     pointer-events: none;
 }
 #m_circulo{
     position: absolute;
-    width: calc(var(--circulo) / 3);
-    height: calc(var(--circulo) / 3);
+    width: calc(clamp(150px, 19.6vw, 300px) / 3);
+    height: calc(clamp(150px, 19.6vw, 300px) / 3);
     border-radius: 50%;
     background-color: #5501CC;
-    right: calc(var(--circulo) * 0.03);
-    bottom: calc(var(--circulo) / 2);
+    right: calc(clamp(150px, 19.6vw, 300px) * 0.03);
+    bottom: calc(clamp(150px, 19.6vw, 300px) / 2);
     pointer-events: none;
 }
 
@@ -513,8 +522,11 @@ textarea:focus{
 }
 
 @media (max-width: 900px){
-    :root{
-        --banner-h: 375px;
+    #voltar{
+        height: 50px;
+    }
+    #voltar img{
+        width: 85px;
     }
     #banner_principal{
         flex-direction: column;
@@ -542,7 +554,9 @@ textarea:focus{
         height: auto;
     }
     #frase{
+        padding-top: 50px;
         padding-right: 20px;
+        padding-bottom: 30px;
     }
     #voltar p{
         padding: 30px 20px;
