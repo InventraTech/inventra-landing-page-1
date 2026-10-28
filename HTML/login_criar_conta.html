@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventra</title>
+    <title>Inventra - Criar</title>
     <link rel="icon" type="Image/png" href="../elementos_visuais/logo_imagotipo.png">
     <link rel="stylesheet" href="../CSS/style_login_criar.css">
 
@@ -28,7 +28,7 @@
                 </a>
                 <img class="imagotipo" src="../elementos_visuais/logo_imagotipo.png" width="50">
             </div>
-            <h1 id="title">Comece com o <spam id="roxo">Inventra</spam></h1>
+            <h1 id="title">Comece com o <span id="roxo">Inventra</span></h1>
             <p id="descricao_head">Crie sua conta gratuita ou entre para continuar.</p>
         </header>
 
@@ -60,14 +60,14 @@
             </a>
         </div>
 
-        <form>
+        <form id="form_criar_conta" action="aba_pagamento.html">
             <label for="nome">Nome</label><br>
-            <input  name="nome" type="text" placeholder="Seu nome" required><br>
+            <input  id="nome" name="nome" type="text" placeholder="Seu nome" required><br>
             <label for="email">E-mail</label><br>
-            <input  name="email" type="email" placeholder="voce@empresa.com" required><br>
+            <input  id="email" name="email" type="email" placeholder="voce@empresa.com" required><br>
             <label for="senha">Senha</label><br>
-            <input  name="senha" type="password" placeholder="Digite sua senha" required>
-            <a href="aba_pagamento.html" id="entrar_site" type="submit">
+            <input  id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+            <a href="aba_pagamento.html" id="entrar_site">
                 <p>Criar conta grátis</p>
             </a>
         </form>
@@ -77,6 +77,24 @@
         </footer>
 
     </div>
+
+    <script>
+        const form = document.getElementById("form_criar_conta");
+        const botaoCriar = document.getElementById("entrar_site");
+
+        botaoCriar.addEventListener("click", function (evento) {
+            evento.preventDefault();
+
+            if (form.reportValidity()) {
+                window.location.href = botaoCriar.getAttribute("href");
+            }
+        });
+
+        form.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+            botaoCriar.click();
+        });
+    </script>
 
 </body>
 </html>
