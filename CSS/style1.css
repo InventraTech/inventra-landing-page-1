@@ -731,6 +731,19 @@ header {
     font-size: 14px;
     color: #DFDFDF;
 }
+
+.rodapeLogo .linkAdmin {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodapeLogo .linkAdmin:hover {
+    color: #FFDC32;
+}
  
 @media (max-width: 900px) {
  
